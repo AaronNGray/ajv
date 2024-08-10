@@ -30,8 +30,30 @@
     "prepublish": "npm run build",
     "benchmark": "npm i && npm run build && npm link && cd ./benchmark && npm link --legacy-peer-deps ajv && npm i && node ./jtd",
     "docs:dev": "./scripts/prepare-site && vuepress dev docs",
-    "docs:build": "./scripts/prepare-site && vuepress build docs"
+    "docs:build": "./scripts/prepare-site && vuepress build docs",
+    "typedoc": "typedoc --out typedoc lib/ajv.ts lib/core.ts lib/compile/index.ts lib/compile/validate/dataType.ts lib/compile/rules.ts lib/compile/codegen/code.ts lib/compile/codegen/scope.ts lib/compile/errors.ts lib/compile/util.ts lib/vocabularies/applicator/index.ts lib/vocabularies/format/format.ts lib/vocabularies/unevaluated/unevaluatedProperties.ts lib/vocabularies/unevaluated/unevaluatedItems.ts lib/vocabularies/validation/index.ts lib/vocabularies/validation/dependentRequired.ts lib/vocabularies/discriminator/index.ts lib/types/index.ts lib/types/json-schema.ts lib/types/jtd-schema.ts"
   },
+  "workspaces": [
+    "lib/ajv.ts",
+    "lib/core.ts",
+    "lib/compile/index.ts",
+    "lib/compile/validate/dataType.ts",
+    "lib/compile/rules.ts",
+    "lib/compile/codegen/code.ts",
+    "lib/compile/codegen/scope.ts",
+    "lib/compile/errors.ts",
+    "lib/compile/util.ts",
+    "lib/vocabularies/applicator/index.ts",
+    "lib/vocabularies/format/format.ts",
+    "lib/vocabularies/unevaluated/unevaluatedProperties.ts",
+    "lib/vocabularies/unevaluated/unevaluatedItems.ts",
+    "lib/vocabularies/validation/index.ts",
+    "lib/vocabularies/validation/dependentRequired.ts",
+    "lib/vocabularies/discriminator/index.ts",
+    "lib/types/index.ts",
+    "lib/types/json-schema.ts",
+    "lib/types/jtd-schema.ts"
+  ],
   "nyc": {
     "exclude": [
       "**/spec/**",
@@ -62,6 +84,7 @@
     "fast-deep-equal": "^3.1.3",
     "fast-uri": "^3.0.1",
     "json-schema-traverse": "^1.0.0",
+    "npm": "^10.8.2",
     "require-from-string": "^2.0.2"
   },
   "devDependencies": {
@@ -104,6 +127,7 @@
     "rollup-plugin-terser": "^7.0.2",
     "ts-node": "^10.9.2",
     "tsify": "^5.0.4",
+    "typedoc": "^0.26.5",
     "typescript": "5.3.3",
     "uri-js": "^4.4.1"
   },

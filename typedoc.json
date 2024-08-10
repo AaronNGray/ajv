@@ -1,0 +1,23 @@
+{
+    "entryPoints": [
+        "lib/ajv.ts",
+        "lib/core.ts",
+        "lib/compile/index.ts",
+        "lib/compile/validate/dataType.ts",
+        "lib/compile/rules.ts",
+        "lib/compile/codegen/code.ts",
+        "lib/compile/codegen/scope.ts",
+        "lib/compile/errors.ts",
+        "lib/compile/util.ts",
+        "lib/vocabularies/applicator/index.ts",
+        "lib/vocabularies/format/format.ts",
+        "lib/vocabularies/unevaluated/unevaluatedProperties.ts",
+        "lib/vocabularies/unevaluated/unevaluatedItems.ts",
+        "lib/vocabularies/validation/index.ts",
+        "lib/vocabularies/validation/dependentRequired.ts",
+        "lib/vocabularies/discriminator/index.ts",
+        "lib/types/index.ts",
+        "lib/types/json-schema.ts",
+        "lib/types/jtd-schema.ts"
+    ]
+}
